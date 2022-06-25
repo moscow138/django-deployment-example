@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+<form method="POST" action="{% url 'signup' %}">
+  {% csrf_token %}
+  <div class="mb-1">
+
+    <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="First name" name="fname" value="{{fname}}">
+    <div id="firstname" class="form-text">We'll never share your name with anyone else.</div>
+
+    <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Last name" name="lname"  value="{{lname}}">
+    <div id="lastname" class="form-text">We'll never share your name with anyone else.</div>
+
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" name="email"  value="{{email}}">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <input type="number" class="form-control" id="age" aria-describedby="age" placeholder="Your age" name="age"  value="{{age}}">
+  <div id="age" class="form-text">We'll never share your age with anyone else.</div>
+
+  <input type="password" class="form-control" id="passwd" aria-describedby="age" placeholder="Your password" name="passwd"  value="{{passwd}}">
+  <div id="passwd" class="form-text">We'll never share your password with anyone else.</div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
