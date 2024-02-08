@@ -1,2 +1,2 @@
 print ('hello')
-print('john ogheneochuko')
+print('john')
